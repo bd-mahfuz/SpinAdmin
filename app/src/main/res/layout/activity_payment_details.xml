@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentDetailsActivity">
+
+
+    <include layout="@layout/app_bar_layout"
+        android:id="@+id/payment_details_toolbar"/>
+
+    <!--<LinearLayout
+        android:id="@+id/top_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/payment_toolbar"
+        android:background="@drawable/rounded_border">
+
+        <TextView
+            android:id="@+id/bkash_bt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bkash"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/round_left_side"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/rocket_bt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/rocket"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:padding="10dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/mobile_recharge_bt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/mobile_recharge"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            />
+
+    </LinearLayout>-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/payment_details_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/withdraw_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/withdraw_amount"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/withdraw_point_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_phone"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center_horizontal"/>
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_below="@id/withdraw_layout"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/p_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_name"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/pm_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/user_name"
+                    android:layout_below="@id/p_name_tv"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rounded_border_back"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/payment_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_margin="8dp"
+                android:layout_below="@+id/name_layout">
+
+                <TextView
+                    android:id="@+id/pay_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payment_method"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/pay_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pay_type_tv"
+                    android:layout_marginTop="5dp"
+                    tools:text="@string/bKash"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_border_back"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/phone_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_margin="8dp"
+                android:layout_below="@+id/payment_type_layout">
+
+                <TextView
+                    android:id="@+id/phone_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_number"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/mobile_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border_back"
+                    android:padding="10dp"
+                    tools:text="@string/dummy_phone"
+                    android:layout_below="@id/phone_tv"
+                    android:layout_marginTop="10dp"
+                    android:inputType="phone|number"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/email_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_margin="8dp"
+                android:layout_below="@+id/phone_layout">
+
+                <TextView
+                    android:id="@+id/p_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/p_email_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:layout_below="@id/p_email"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_border_back"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/account_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_margin="8dp"
+                android:layout_below="@+id/email_layout">
+
+                <TextView
+                    android:id="@+id/account_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_type"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/account_type_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/agent"
+                    android:inputType="textEmailAddress"
+                    android:layout_below="@id/account_type"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_border_back"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+            </RelativeLayout>
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/pay_bt"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/pay"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/account_type_layout"
+                android:layout_marginTop="15dp"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:backgroundTint="@color/colorPrimaryDark"
+                />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Spin Admin</string>
+    <string name="no_user_found">No user found!</string>
+    <string name="user_name">User Name</string>
+    <string name="pending">Pending</string>
+    <string name="no_requests_are_available">No Requests are available!</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="bKash">bKash</string>
+    <string name="dummy_phone">02340180392</string>
+    <string name="email">Email</string>
+    <string name="agent">Agent</string>
+    <string name="pay">Pay</string>
+    <string name="withdraw_amount">Withdraw Amount:</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="account_type">Account Type</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="dummy_date">23/23/23</string>
+    <string name="country">Bangladesh</string>
+</resources>
